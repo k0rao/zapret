@@ -1,0 +1,6 @@
+ely.by
+accounts.ely.by
+auth.ely.by
+api.ely.by
+launcher.ely.by
+freetp.ru
