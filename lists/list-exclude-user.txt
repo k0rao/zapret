@@ -4,3 +4,4 @@ auth.ely.by
 api.ely.by
 launcher.ely.by
 freetp.ru
+ggsel.net

@@ -441,4 +441,7 @@ staging-api.modrinth.com
 modrinth.com
 api.modrinth.com
 cdn.modrinth.com
+accounts.google.com
 www.gstatic.com
+fonts.googleapis.com
+js.stipe.com

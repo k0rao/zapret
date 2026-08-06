@@ -35,7 +35,7 @@ start "zapret: %~n0" /min "%BIN%winws.exe" ^
 --dpi-desync-fake-discord="%BIN%stun.bin" ^
 --dpi-desync-fake-discord="%BIN%ACTIVE_DISCORD_UDP.bin" ^
 --dpi-desync-fake-stun="%BIN%ACTIVE_DISCORD_UDP.bin" ^
---dpi-desync-repeats=3 ^
+--dpi-desync-repeats=2 ^
 --new ^
 
 --filter-tcp=2053,2083,2087,2096,8443 ^
@@ -53,7 +53,7 @@ start "zapret: %~n0" /min "%BIN%winws.exe" ^
 --hostlist="%LISTS%list-discord.txt" ^
 --dpi-desync=hostfakesplit ^
 --dpi-desync-fooling=ts ^
---dpi-desync-repeats=4 ^
+--dpi-desync-repeats=2 ^
 --dpi-desync-hostfakesplit-mod=host=www.google.com ^
 --new ^
 
@@ -96,7 +96,6 @@ start "zapret: %~n0" /min "%BIN%winws.exe" ^
 --dpi-desync-fake-tls="%BIN%tls_clienthello_www_google_com.bin" ^
 --dpi-desync-fake-http="%BIN%tls_clienthello_www_google_com.bin" ^
 --new ^
-
 
 
 --filter-udp=443 ^

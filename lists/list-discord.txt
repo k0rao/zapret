@@ -22,3 +22,7 @@ discordpartygames.com
 discordsays.com
 discordsez.com
 discordstatus.com
+cdn.discordapp.com
+media.discordapp.net
+images-ext-1.discordapp.net
+images-ext-2.discordapp.net
