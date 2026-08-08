@@ -5,3 +5,15 @@ api.ely.by
 launcher.ely.by
 freetp.ru
 ggsel.net
+gofile.io
+s.gofile.io
+store6.gofile.io
+store7.gofile.io
+store9.gofile.io
+store-na-phx-3.gofile.io
+file-na-lax-1.gofile.io
+admin.gofile.io
+dev.gofile.io
+mail.gofile.io
+cloud.gofile.io
+plausible.gofile.io
