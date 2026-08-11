@@ -458,3 +458,9 @@ steamgames.com
 steam.tv
 s.team
 playartifact.com
+
+gaggle.fun
+goosegooseduck.com
+epicgames.com
+epicgamescdn.com
+akamaized.net

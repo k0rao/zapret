@@ -9,8 +9,8 @@ call service.bat load_game_filter
 call service.bat load_user_lists
 echo:
 
-set "BIN=%~dp0bin"
-set "LISTS=%~dp0lists"
+set "BIN=%~dp0bin\"
+set "LISTS=%~dp0lists\"
 
 cd /d "%BIN%"
 
@@ -32,38 +32,25 @@ start "zapret: %~n0" /min "%BIN%winws.exe" ^
 
 
 --new ^
---filter-udp=19294-19344,50000-50100 ^
+--filter-udp=19294-19344,50000-50200 ^
 --filter-l7=discord,stun ^
 --dpi-desync=fake ^
+--dpi-desync-fake-discord="%BIN%stun.bin" ^
 --dpi-desync-fake-discord="%BIN%ACTIVE_DISCORD_UDP.bin" ^
 --dpi-desync-fake-stun="%BIN%ACTIVE_DISCORD_UDP.bin" ^
---dpi-desync-repeats=2 ^
+--dpi-desync-repeats=4 ^
 
 
 --new ^
---filter-udp=50101-50200 ^
---filter-l7=discord,stun ^
---dpi-desync=fake ^
---dpi-desync-fake-discord="%BIN%ACTIVE_DISCORD_UDP.bin" ^
---dpi-desync-fake-stun="%BIN%ACTIVE_DISCORD_UDP.bin" ^
---dpi-desync-repeats=2 ^
-
-
---new ^
---filter-tcp=2053,2083,2087,2096,8443 ^
---hostlist-domains=discord.media ^
---dpi-desync=hostfakesplit ^
+--filter-tcp=443,2053,2083,2087,2096,8443 ^
+--hostlist-domains=discord.media,discord.com,discordapp.com,discordapp.net,cdn.discordapp.com ^
+--dpi-desync=fake,multisplit ^
+--dpi-desync-split-seqovl=681 ^
+--dpi-desync-split-pos=1 ^
 --dpi-desync-fooling=ts ^
---dpi-desync-repeats=2 ^
---dpi-desync-hostfakesplit-mod=host=www.google.com ^
-
---new ^
---filter-tcp=443 ^
---hostlist="%LISTS%list-discord.txt" ^
---dpi-desync=hostfakesplit ^
---dpi-desync-fooling=ts ^
---dpi-desync-repeats=2 ^
---dpi-desync-hostfakesplit-mod=host=www.google.com ^
+--dpi-desync-repeats=8 ^
+--dpi-desync-split-seqovl-pattern="%BIN%tls_clienthello_www_google_com.bin" ^
+--dpi-desync-fake-tls="%BIN%tls_clienthello_www_google_com.bin" ^
 
 
 --new ^
@@ -137,6 +124,7 @@ start "zapret: %~n0" /min "%BIN%winws.exe" ^
 --dpi-desync-fooling=ts ^
 --dpi-desync-repeats=8 ^
 --dpi-desync-split-seqovl-pattern="%BIN%tls_clienthello_max_ru.bin" ^
+--dpi-desync-fake-tls="%BIN%stun.bin" ^
 --dpi-desync-fake-tls="%BIN%tls_clienthello_max_ru.bin" ^
 --dpi-desync-fake-http="%BIN%tls_clienthello_max_ru.bin" ^
 
@@ -155,6 +143,7 @@ start "zapret: %~n0" /min "%BIN%winws.exe" ^
 --dpi-desync-fooling=ts ^
 --dpi-desync-repeats=8 ^
 --dpi-desync-split-seqovl-pattern="%BIN%tls_clienthello_max_ru.bin" ^
+--dpi-desync-fake-tls="%BIN%stun.bin" ^
 --dpi-desync-fake-tls="%BIN%tls_clienthello_max_ru.bin" ^
 --dpi-desync-fake-http="%BIN%tls_clienthello_max_ru.bin" ^
 
