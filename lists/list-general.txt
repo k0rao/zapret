@@ -330,3 +330,4 @@ youtubei.googleapis.com
 yt-video-upload.l.google.com
 ytimg.com
 ytimg.l.google.com
+huggingface.co
