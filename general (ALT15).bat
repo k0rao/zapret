@@ -43,7 +43,7 @@ start "zapret: %~n0" /min "%BIN%winws.exe" ^
 
 --new ^
 --filter-tcp=443,2053,2083,2087,2096,8443 ^
---hostlist-domains=discord.media,discord.com,discordapp.com,discordapp.net,cdn.discordapp.com ^
+--hostlist="%LISTS%list-discord.txt" ^
 --dpi-desync=fake,multisplit ^
 --dpi-desync-split-seqovl=681 ^
 --dpi-desync-split-pos=1 ^

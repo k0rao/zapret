@@ -27,3 +27,10 @@ media.discordapp.net
 images-ext-1.discordapp.net
 images-ext-2.discordapp.net
 discord-attachments-uploads-prd.storage.googleapis.com
+media.discordapp.net
+cdn.discordapp.com
+static.discordcdn.com
+cdn.discord.com
+media.discord.com
+images-ext-1.discordapp.net
+images-ext-2.discordapp.net
